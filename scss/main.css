@@ -112,10 +112,6 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
 /**
  * Address styling not present in IE 8/9.
  */
@@ -399,40 +395,56 @@ ul, li {
       display: inline-block; }
       .header .navbar .menu .menu-item a {
         display: block;
-        padding: 1rem 2rem; }
+        padding: 1rem 2rem;
+        border-radius: .2rem; }
       .header .navbar .menu .menu-item :hover {
+        color: #c05b4d;
         background-color: #f5f6f7; }
 
 .main {
+  position: relative;
   width: 75rem;
   margin: 0 auto;
   line-height: 1.8;
   color: #34495e; }
-  .main .posts .post {
+  .main .container {
+    padding: 2rem 3rem; }
+  .main .archive {
+    padding: 2rem 3rem; }
+  .main .post {
     position: relative;
     padding: 2rem 3rem;
     padding-bottom: 4rem;
     margin-top: 1rem;
     border-radius: .4rem; }
-    .main .posts .post:hover {
+    .main .post:hover {
       background-color: #f9f9f9; }
-    .main .posts .post .post-title {
+    .main .post .post-title {
       font-size: 2rem;
+      font-weight: normal;
       color: #c05b4d; }
-      .main .posts .post .post-title :hover {
+      .main .post .post-title :hover {
         color: #ea8f82; }
-    .main .posts .post .post-meta {
-      position: absolute;
-      left: 3rem;
-      bottom: 1.7rem;
+    .main .post .post-meta {
       color: #999;
       font-size: 1.3rem; }
-    .main .posts .post .post-readmore {
+    .main .post .post-readmore {
+      position: absolute;
+      right: 3.8rem;
+      bottom: 4rem;
       margin: 0;
-      position: absolute;
-      right: 4rem;
-      bottom: 1.7rem;
       color: #999;
       font-size: 1.3rem; }
-      .main .posts .post .post-readmore :hover {
+      .main .post .post-readmore :hover {
         color: #c05b4d; }
+  .main nav {
+    position: absolute;
+    right: 3rem;
+    color: #c05b4d; }
+    .main nav a, .main nav span {
+      display: inline-block;
+      padding: 2rem; }
+      .main nav a:last-child, .main nav span:last-child {
+        padding-right: 0; }
+      .main nav a:hover, .main nav span:hover {
+        color: #ea8f82; }
