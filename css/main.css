@@ -17,5 +17,15 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}
 textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}@font-face{font-family:"Dosis-Regular";src:url("../../font/Dosis/Dosis-Regular.ttf")}
+@font-face{font-family:"Dosis-Medium";src:url("../../font/Dosis/Dosis-Medium.ttf")}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .5s ease 0s;transition:all .5s ease 0s}
 html{font-size:62.5%}body{font-family:"Dosis-Regular","PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:#333;font-size:1.4rem}
-a{color:inherit;text-decoration:none}.main{width:80rem;margin:0 auto}
+a{color:inherit;text-decoration:none}ul,li{list-style:none}.header{width:75rem;margin:0 auto;margin-bottom:0;padding:3rem;padding-bottom:1rem;padding-right:1.2rem;overflow:hidden}
+.header .blog-title{float:left;padding-top:1rem;font-size:3rem}.header .navbar{float:right}
+.header .navbar .menu .menu-item{display:inline-block}.header .navbar .menu .menu-item a{display:block;padding:1rem 2rem}
+.header .navbar .menu .menu-item :hover{background-color:#f5f6f7}.main{width:75rem;margin:0 auto;line-height:1.8;color:#34495e}
+.main .posts .post{position:relative;padding:2rem 3rem;padding-bottom:4rem;margin-top:1rem;border-radius:.4rem}
+.main .posts .post:hover{background-color:#f9f9f9}.main .posts .post .post-title{font-size:2rem;color:#c05b4d}
+.main .posts .post .post-title :hover{color:#ea8f82}.main .posts .post .post-meta{position:absolute;left:3rem;bottom:1.7rem;color:#999;font-size:1.3rem}
+.main .posts .post .post-readmore{margin:0;position:absolute;right:4rem;bottom:1.7rem;color:#999;font-size:1.3rem}
+.main .posts .post .post-readmore :hover{color:#c05b4d}
