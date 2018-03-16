@@ -19,4 +19,8 @@ td,th{padding:0}@font-face{font-family:"Dosis-Regular";src:url("../../font/Dosis
 @font-face{font-family:"Dosis-Medium";src:url("../../font/Dosis/Dosis-Medium.ttf")}
 @font-face{font-family:"SFMono-Regular";src:url("../../font/SFMono/SFMono-Regular.otf")}
 @font-face{font-family:"SFMono-Regular";src:url("../../font/SFMono/SFMono-Medium.otf")}
-*{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}
+*{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}body{font-family:"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:#333;font-size:1.4rem}
+a{font-family:inherit;color:inherit;text-decoration:none}ul,li{list-style:none;padding:0;margin:0}
+.header{position:fixed;padding:2rem;right:2rem;top:3rem;background:#eee}.header .blog-title{padding-bottom:3rem;font-family:Dosis-Regular,"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;font-size:3rem}
+.header .navbar{float:left}.header .navbar .menu-item-link{display:block;padding:.3rem 1rem;padding-left:0}
+.main{width:100rem;margin:0 auto;padding-top:3rem}.post-title{font-size:2rem}
