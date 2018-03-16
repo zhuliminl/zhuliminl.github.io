@@ -21,6 +21,12 @@ td,th{padding:0}@font-face{font-family:"Dosis-Regular";src:url("../../font/Dosis
 @font-face{font-family:"SFMono-Regular";src:url("../../font/SFMono/SFMono-Medium.otf")}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}body{font-family:"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:#333;font-size:1.4rem}
 a{font-family:inherit;color:inherit;text-decoration:none}ul,li{list-style:none;padding:0;margin:0}
-.header{position:fixed;padding:2rem;right:2rem;top:3rem;background:#eee}.header .blog-title{padding-bottom:3rem;font-family:Dosis-Regular,"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;font-size:3rem}
-.header .navbar{float:left}.header .navbar .menu-item-link{display:block;padding:.3rem 1rem;padding-left:0}
-.main{width:100rem;margin:0 auto;padding-top:3rem}.post-title{font-size:2rem}
+code{font-family:SFMono-Regular,Courier,"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:inherit}
+.header{position:fixed;padding:2rem;right:2rem;top:3rem;background:#eee}.header .blog-title{padding-bottom:3rem;font-family:Dosis-Regular,"PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;font-size:3rem;color:#888}
+.header .navbar{float:left}.header .navbar .menu-item-link{display:block;padding:.3rem 1rem;padding-left:0;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+.header .navbar .menu-item-link:hover{color:#ff655c}.main{position:relative;width:100rem;margin:0 auto;padding-top:3rem}
+.post{padding:2rem;padding-top:2rem;border-bottom:.1rem solid #f5f6f7;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+.post:last-child{border-bottom:0}.post:hover{background:#f5f6f7}.post-title{font-size:2rem}
+.post-title:hover{color:#333}.post-content{color:#777;line-height:1.5}.post-meta{font-size:1.3rem;color:#888}
+.page-nav{position:absolute;bottom:-4rem;right:4rem}.page-nav a,.page-nav span{padding:1rem;margin-left:2rem}
+.page-nav a:hover,.page-nav span:hover{background:#eee}
