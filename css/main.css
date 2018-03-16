@@ -17,16 +17,6 @@ fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{
 textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}@font-face{font-family:"Dosis-Regular";src:url("../../font/Dosis/Dosis-Regular.ttf")}
 @font-face{font-family:"Dosis-Medium";src:url("../../font/Dosis/Dosis-Medium.ttf")}
-*{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all .5s ease 0s;transition:all .5s ease 0s}
-html{font-size:62.5%}body{font-family:"Dosis-Regular","PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:#333;font-size:1.4rem}
-a{color:inherit;text-decoration:none}ul,li{list-style:none}.header{width:75rem;margin:0 auto;margin-bottom:0;padding:3rem;padding-bottom:1rem;padding-right:1.2rem;overflow:hidden}
-.header .blog-title{float:left;padding-top:1rem;font-size:3rem}.header .navbar{float:right}
-.header .navbar .menu .menu-item{display:inline-block}.header .navbar .menu .menu-item a{display:block;padding:1rem 2rem;border-radius:.2rem}
-.header .navbar .menu .menu-item :hover{color:#c05b4d;background-color:#f5f6f7}.main{position:relative;width:75rem;margin:0 auto;line-height:1.8;color:#34495e}
-.main .container{padding:2rem 3rem}.main .archive{padding:2rem 3rem}.main .post{position:relative;padding:2rem 3rem;padding-bottom:4rem;margin-top:1rem;border-radius:.4rem}
-.main .post:hover{background-color:#f9f9f9}.main .post .post-title{font-size:2rem;font-weight:normal;color:#c05b4d}
-.main .post .post-title :hover{color:#ea8f82}.main .post .post-meta{color:#999;font-size:1.3rem}
-.main .post .post-readmore{position:absolute;right:3.8rem;bottom:4rem;margin:0;color:#999;font-size:1.3rem}
-.main .post .post-readmore :hover{color:#c05b4d}.main nav{position:absolute;right:3rem;color:#c05b4d}
-.main nav a,.main nav span{display:inline-block;padding:2rem}.main nav a:last-child,.main nav span:last-child{padding-right:0}
-.main nav a:hover,.main nav span:hover{color:#ea8f82}
+@font-face{font-family:"SFMono-Regular";src:url("../../font/SFMono/SFMono-Regular.otf")}
+@font-face{font-family:"SFMono-Regular";src:url("../../font/SFMono/SFMono-Medium.otf")}
+*{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}
