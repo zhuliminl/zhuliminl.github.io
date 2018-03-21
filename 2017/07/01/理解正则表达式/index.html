@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<!-- 头部描述 -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/favicon.png">
+	<title>Saul`s blog</title>
+	<!-- 样式 -->
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+	<header class="header">
+	<!-- 博客标题 -->
+	<div class="blog-title">
+		<a href="/" class='logo'>Saul`s blog</a>
+	</div>
+	<!-- 导航 -->
+	<nav class="navbar">
+		<ul class="menu">
+			
+				<li class="menu-item">
+					<a href="/" class="menu-item-link">
+						首页
+					</a>
+				</li>
+			
+				<li class="menu-item">
+					<a href="/archives/" class="menu-item-link">
+						归档
+					</a>
+				</li>
+			
+				<li class="menu-item">
+					<a href="/about/" class="menu-item-link">
+						关于
+					</a>
+				</li>
+			
+		</ul>
+	</nav>
+</header>
+
+	<!-- 主体内容 -->
+	<main class='main'>
+		<!-- 文章 -->
+<article class="post">
+	<!-- 文章标题 -->
+	<div class="post-title">
+		<h1 class="title">理解正则表达式</h1>
+	</div>
+	<!-- 文章描述 -->
+	<div class="post-meta">
+		<span class="post-time">2017-07-01</span>
+        
+  <div class="post-category">
+    <a class="post-category-link" href="/categories/technology/">technology</a>
+  </div>
+
+
+	</div>
+	<!-- 文章内容 -->
+	<div class="post-content">
+		<h3 id="正则表达式概念小结"><a href="#正则表达式概念小结" class="headerlink" title="正则表达式概念小结"></a>正则表达式概念小结</h3><p>正则表示中的特殊字符有不同的含义，一共分 6 种。分别是：</p>
+<ul>
+<li>字符类别</li>
+<li>字符集合</li>
+<li>边界</li>
+<li>分组和反向引用</li>
+<li>数量词</li>
+<li>断言</li>
+</ul>
+<h4 id="字符类别-Chraracter-Classes"><a href="#字符类别-Chraracter-Classes" class="headerlink" title="字符类别(Chraracter Classes)"></a>字符类别(Chraracter Classes)</h4><p>常见的有</p>
+<ul>
+<li><code>.</code> 表示匹配任意字符</li>
+<li><code>\d</code> 表示匹配任意阿拉伯数字</li>
+<li><code>\w</code> 表示匹配任意字符（还包括下划线）</li>
+<li><code>\s</code> 表示匹配一个空白符号</li>
+</ul>
+<blockquote>
+<p>特殊字符的大写形式则表达了小写形式的反义，不在赘述</p>
+</blockquote>
+<h4 id="字符集合-Chraracter-Sets"><a href="#字符集合-Chraracter-Sets" class="headerlink" title="字符集合(Chraracter Sets)"></a>字符集合(Chraracter Sets)</h4><ul>
+<li><code>[xyz]</code> 表示匹配一个字符的集合，也叫字符组。别看它很长，其实它只匹配一个字符。可以使用 <code>-</code> 来指定一个范围</li>
+<li><code>[^xyz]</code> 是上一个匹配方式的反义形式,叫做反义字符组。即匹配任意不包括在括号内的字符</li>
+</ul>
+<h4 id="边界-Boundaries"><a href="#边界-Boundaries" class="headerlink" title="边界(Boundaries)"></a>边界(Boundaries)</h4><ul>
+<li><code>^</code> 匹配开始</li>
+<li><code>$</code> 匹配结尾</li>
+</ul>
+<h4 id="分组和反向引用-grouping-amp-back-references"><a href="#分组和反向引用-grouping-amp-back-references" class="headerlink" title="分组和反向引用(grouping &amp; back references)"></a>分组和反向引用(grouping &amp; back references)</h4><ul>
+<li><code>(X)</code> 匹配 x 并且捕获匹配项，被称之为捕获型分组</li>
+<li><code>(?:X)</code> 非捕获型分组，仅做简单的匹配，并不会捕获所匹配的文本。有微弱的性能优势。非捕获型分组并不会干扰捕获型分组的编号。如果 <code>(?:X)?</code> 带有后缀 ？ 则表示这个分组是可选的</li>
+<li><code>\n</code> n 是一个正整数，一个反向引用，指向正则表达式中第 n 个括号中匹配的子字符串</li>
+</ul>
+<h4 id="数量词-Quantifiers"><a href="#数量词-Quantifiers" class="headerlink" title="数量词(Quantifiers)"></a>数量词(Quantifiers)</h4><ul>
+<li><code>X*</code> 匹配 x 并且捕获匹配项，被称之为捕获型分组</li>
+<li><code>X+</code> 非捕获型分组，仅做简单的匹配，并不会捕获所匹配的文本。有微弱的性能优势。非捕获型分组并不会干扰捕获型分组的编号</li>
+<li><code>X*?</code> 同 <code>X*</code>，但是会匹配最小可能匹配。比如 /“.<em>?”/ 匹配 ‘“foo” “bar”‘ 中的 ‘“foo”‘，而 </em> 后面没有 ? 时匹配 ‘“foo” “bar”‘</li>
+<li><code>X?</code> 匹配前面的模式 X 0 或 1 次。如果在数量词 *、+、? 或 {}, 任意一个后面紧跟该符号（?），会使数量词变为非贪婪（ non-greedy） ，即匹配次数最小化。反之，默认情况下，是贪婪的（greedy），即匹配次数最大化</li>
+<li><code>x|y</code> 匹配 x 或 y</li>
+<li><code>x{n}</code> 前面的模式 x 连续出现 n 次时匹配。{n,} 和 {n, m} 则表示次数的区间</li>
+</ul>
+<h4 id="断言-Assertions"><a href="#断言-Assertions" class="headerlink" title="断言(Assertions)"></a>断言(Assertions)</h4><ul>
+<li><code>x(?=y)</code> 条件限定，只有当 x 后面紧跟着 y 时，才匹配 x</li>
+<li><code>x(?!y)</code> 条件限定，只有当 x 后面不是紧跟着 y 时，才匹配 x</li>
+</ul>
+<h3 id="常见正则表达式收集"><a href="#常见正则表达式收集" class="headerlink" title="常见正则表达式收集"></a>常见正则表达式收集</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// 验证邮箱</div><div class="line">([a-z_A-Z0-9]+@[a-z_A-Z0-9]+\.(com|org|net))</div><div class="line"></div><div class="line">// 验证网址</div><div class="line">(?:https?:\/\/)?(?:[a-zA-Z0-9])+\.(?:com|net|org)</div><div class="line"></div><div class="line">// 验证网址</div><div class="line">^(?:([A-Za-z]+):)?(\/&#123;0,3&#125;)([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$</div></pre></td></tr></table></figure>
+
+	</div>
+	<!-- 页码导航 -->
+
+
+</article>
+
+
+	</main>
+</body>
+</html>
